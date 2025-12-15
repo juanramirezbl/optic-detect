@@ -3,27 +3,28 @@ optic/
 │   ├── opticApp.swift
 │   └── Info.plist
 │
-├── Models
-│   ├── Route.swift
-│   └── Detection.swift
+├── Core
+│   ├── Models
+│   │   ├── Route.swift
+│   │   └── Detection.swift
+│   ├── Services
+│   │   ├── CameraManager.swift
+│   │   ├── YOLOService.swift
+│   │   └── DataManager.swift
+│   └── UI
+│       └── DetectionBox.swift
 │
-├── Views
-│   ├── DashboardView.swift
-│   ├── HistoryView.swift
-│   ├── LoginView.swift
-│   └── Components/
-│       ├── DetectionBox.swift
-│       └── CustomButton.swift
-│
-├── ViewModels
-│   ├── DashboardViewModel.swift
-│   └── HistoryViewModel.swift
-│
-├── Services
-│   ├── CameraManager.swift
-│   ├── YOLOService.swift
-│   ├── AudioService.swift
-│   └── DataManager.swift
+├── Features
+│   ├── Dashboard
+│   │   ├── DashboardView.swift
+│   │   └── DashboardViewModel.swift
+│   ├── History
+│   │   ├── HistoryView.swift
+│   │   ├── HistoryViewModel.swift
+│   │   └── RouteDetailView.swift
+│   └── Login
+│       ├── LoginView.swift
+│       └── LoginViewModel.swift
 │
 ├── Resources
 │   ├── Assets.xcassets
