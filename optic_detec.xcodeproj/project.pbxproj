@@ -34,8 +34,11 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/optic_detecApp.swift,
+				Models/Detection.swift,
+				Models/User.swift,
 				Resources/Assets.xcassets,
-				Views/ContentView.swift,
+				ViewModels/LoginViewModel.swift,
+				Views/LoginView.swift,
 			);
 			target = C7CED1962EEA393500C28194 /* optic_detec */;
 		};
@@ -45,9 +48,18 @@
 				App/optic_detecApp.swift,
 				Resources/Assets.xcassets,
 				structure.md,
-				Views/ContentView.swift,
+				Views/LoginView.swift,
 			);
 			target = C7CED1AD2EEA393700C28194 /* optic_detecUITests */;
+		};
+		C74412C32EF0720C005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/Detection.swift,
+				Models/User.swift,
+				ViewModels/LoginViewModel.swift,
+			);
+			target = C7CED1A32EEA393700C28194 /* optic_detecTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -67,6 +79,7 @@
 			exceptions = (
 				C74412AF2EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detec" target */,
 				C74412BA2EF06873005AF5D4 /* Exceptions for "optic_detec" folder in "Compile Sources" phase from "optic_detec" target */,
+				C74412C32EF0720C005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecTests" target */,
 				C74412B02EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecUITests" target */,
 			);
 			path = optic_detec;
@@ -430,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA8KV78X7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA8KV78X7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
