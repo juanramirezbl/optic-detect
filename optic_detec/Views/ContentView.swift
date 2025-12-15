@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  optic_detec
-//
-//  Created by Juan Ramirez Blanco on 11/12/25.
-//
 
 import SwiftUI
 

@@ -30,34 +30,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C756D12F2EEB4A7E0036A5D5 /* Exceptions for "optic_detec" folder in "optic_detec" target */ = {
+		C74412AF2EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detec" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
-				ContentView.swift,
-				Login/LoginView.swift,
-				Login/LoginViewModel.swift,
-				optic_detecApp.swift,
+				App/optic_detecApp.swift,
+				Resources/Assets.xcassets,
+				Views/ContentView.swift,
 			);
 			target = C7CED1962EEA393500C28194 /* optic_detec */;
 		};
-		C756D1302EEB4A7E0036A5D5 /* Exceptions for "optic_detec" folder in "optic_detecUITests" target */ = {
+		C74412B02EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
-				ContentView.swift,
-				optic_detecApp.swift,
+				App/optic_detecApp.swift,
+				Resources/Assets.xcassets,
+				structure.md,
+				Views/ContentView.swift,
 			);
 			target = C7CED1AD2EEA393700C28194 /* optic_detecUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		C74412BA2EF06873005AF5D4 /* Exceptions for "optic_detec" folder in "Compile Sources" phase from "optic_detec" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = C7CED1932EEA393500C28194 /* Sources */;
+			membershipExceptions = (
+				structure.md,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C756D12B2EEB4A7E0036A5D5 /* optic_detec */ = {
+		C74412A72EF067A1005AF5D4 /* optic_detec */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C756D12F2EEB4A7E0036A5D5 /* Exceptions for "optic_detec" folder in "optic_detec" target */,
-				C756D1302EEB4A7E0036A5D5 /* Exceptions for "optic_detec" folder in "optic_detecUITests" target */,
+				C74412AF2EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detec" target */,
+				C74412BA2EF06873005AF5D4 /* Exceptions for "optic_detec" folder in "Compile Sources" phase from "optic_detec" target */,
+				C74412B02EF067A2005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecUITests" target */,
 			);
 			path = optic_detec;
 			sourceTree = "<group>";
@@ -102,7 +112,7 @@
 		C7CED18E2EEA393500C28194 = {
 			isa = PBXGroup;
 			children = (
-				C756D12B2EEB4A7E0036A5D5 /* optic_detec */,
+				C74412A72EF067A1005AF5D4 /* optic_detec */,
 				C7CED1A72EEA393700C28194 /* optic_detecTests */,
 				C7CED1B12EEA393700C28194 /* optic_detecUITests */,
 				C7CED1982EEA393500C28194 /* Products */,
@@ -178,7 +188,7 @@
 				C7CED1B02EEA393700C28194 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				C756D12B2EEB4A7E0036A5D5 /* optic_detec */,
+				C74412A72EF067A1005AF5D4 /* optic_detec */,
 				C7CED1B12EEA393700C28194 /* optic_detecUITests */,
 			);
 			name = optic_detecUITests;
