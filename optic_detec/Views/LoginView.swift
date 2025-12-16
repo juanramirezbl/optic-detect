@@ -16,6 +16,11 @@ struct LoginView: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
             
+            TextField("Matrícula (Ej: 1234 LLL)", text: $viewModel.licensePlate)
+                            .textFieldStyle(.roundedBorder)
+                            .padding(.horizontal)
+                            .textInputAutocapitalization(.characters)
+            
             if let error = viewModel.errorMessage {
                 Text(error).foregroundColor(.red)
             }
@@ -31,8 +36,7 @@ struct LoginView: View {
     func loginUser() {
         if viewModel.validate() {
             //create user
-            let newUser = User(name: viewModel.username)
-            
+            let newUser = User(name: viewModel.username, licensePlate: viewModel.licensePlate)
             // save in SwiftData
             modelContext.insert(newUser)
             currentUserId = newUser.id.uuidString

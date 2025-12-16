@@ -14,7 +14,13 @@ class LoginViewModel: ObservableObject {
         if username.trimmingCharacters(in: .whitespaces).isEmpty {
                     errorMessage = "Por favor, introduce un nombre para continuar."
                     return false
-        }
+                }
+        
+        if licensePlate.trimmingCharacters(in: .whitespaces).isEmpty {
+                    errorMessage = "La matrícula es obligatoria para registrar el trayecto."
+                    return false
+                }
+        
         errorMessage = nil
         return true
     }
