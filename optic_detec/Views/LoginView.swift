@@ -17,9 +17,9 @@ struct LoginView: View {
                 .padding()
             
             TextField("Matrícula (Ej: 1234 LLL)", text: $viewModel.licensePlate)
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.horizontal)
-                            .textInputAutocapitalization(.characters)
+                .textFieldStyle(.roundedBorder)
+                .padding(.horizontal)
+                .textInputAutocapitalization(.characters)
             
             if let error = viewModel.errorMessage {
                 Text(error).foregroundColor(.red)
@@ -34,15 +34,15 @@ struct LoginView: View {
     }
     
     func loginUser() {
-        if viewModel.validate() {
-            //create user
-            let newUser = User(name: viewModel.username, licensePlate: viewModel.licensePlate)
-            // save in SwiftData
-            modelContext.insert(newUser)
-            currentUserId = newUser.id.uuidString
-            
-            // get in
-            isUserLoggedIn = true
+            if viewModel.validate() {
+                let newUser = User(name: viewModel.username, licensePlate: viewModel.licensePlate)
+                
+                modelContext.insert(newUser)
+                
+                try? modelContext.save()
+                
+                currentUserId = newUser.id.uuidString
+                isUserLoggedIn = true
+            }
         }
-    }
 }

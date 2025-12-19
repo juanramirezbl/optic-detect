@@ -38,6 +38,8 @@
 				Models/User.swift,
 				Resources/Assets.xcassets,
 				ViewModels/LoginViewModel.swift,
+				Views/DashboardView.swift,
+				Views/HomeView.swift,
 				Views/LoginView.swift,
 			);
 			target = C7CED1962EEA393500C28194 /* optic_detec */;
@@ -48,6 +50,8 @@
 				App/optic_detecApp.swift,
 				Resources/Assets.xcassets,
 				structure.md,
+				Views/DashboardView.swift,
+				Views/HomeView.swift,
 				Views/LoginView.swift,
 			);
 			target = C7CED1AD2EEA393700C28194 /* optic_detecUITests */;

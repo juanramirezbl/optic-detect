@@ -9,8 +9,7 @@ struct opticApp: App {
         
         WindowGroup {
             if isUserLoggedIn {
-                Text("¡Bienvenido!")
-                    .font(.largeTitle)
+                HomeView()
                     .modelContainer(for: [User.self, Detection.self])
             } else {
                 LoginView()
