@@ -1,29 +1,51 @@
 import SwiftUI
 
-// improvised with GPT
-
-
 struct DashboardView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    @StateObject private var cameraManager = CameraManager()
+    
+    @AppStorage("currentUserId") private var currentUserId: String = ""
+    @AppStorage("isUserLoggedIn") private var isUserLoggedIn: Bool = false
+    
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "camera.fill")
-                .font(.system(size: 48))
-                .foregroundStyle(.blue)
-            Text("Dashboard / Cámara")
-                .font(.title2)
-                .bold()
-            Text("Esta es una vista temporal. Reemplázala con tu implementación de cámara o panel.")
-                .font(.subheadline)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.secondary)
-                .padding(.horizontal)
+        ZStack {
+            CameraPreview(cameraManager: cameraManager)
+                .ignoresSafeArea()
+            
+            VStack {
+                HStack {
+                    Text("Detectando:")
+                        .foregroundColor(.white)
+                    Text(cameraManager.detectedLabel)
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.yellow)
+                    Spacer()
+                }
+                .padding()
+                .background(Color.black.opacity(0.5))
+                
+                Spacer()
+                
+                Button(action: {
+                    cameraManager.stop()
+                    dismiss()
+                }) {
+                    Text("Exit")
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.bottom, 50)
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
-        .navigationTitle("Conducción")
+        .onAppear {
+            cameraManager.start()
+        }
+        .onDisappear {
+            cameraManager.stop()
+        }
     }
-}
-
-#Preview {
-    NavigationStack { DashboardView() }
 }

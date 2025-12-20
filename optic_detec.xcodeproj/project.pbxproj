@@ -35,9 +35,11 @@
 			membershipExceptions = (
 				App/optic_detecApp.swift,
 				ColeML/yolo11n.mlpackage,
+				Helpers/CameraPreview.swift,
 				Models/Detection.swift,
 				Models/User.swift,
 				Resources/Assets.xcassets,
+				Services/CameraManager.swift,
 				ViewModels/LoginViewModel.swift,
 				Views/DashboardView.swift,
 				Views/HomeView.swift,
@@ -61,8 +63,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ColeML/yolo11n.mlpackage,
+				Helpers/CameraPreview.swift,
 				Models/Detection.swift,
 				Models/User.swift,
+				Services/CameraManager.swift,
 				ViewModels/LoginViewModel.swift,
 			);
 			target = C7CED1A32EEA393700C28194 /* optic_detecTests */;
@@ -225,7 +229,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
-				LastUpgradeCheck = 2610;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					C7CED1962EEA393500C28194 = {
 						CreatedOnToolsVersion = 26.1.1;
@@ -381,6 +385,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -437,6 +442,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -452,6 +458,8 @@
 				DEVELOPMENT_TEAM = HA8KV78X7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "optic-detec-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesario para detectar señales";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,6 +492,8 @@
 				DEVELOPMENT_TEAM = HA8KV78X7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "optic-detec-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesario para detectar señales";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
