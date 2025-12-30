@@ -53,7 +53,7 @@ class CameraManager: NSObject, ObservableObject {
         do {
             // Set up model (yolo11n)
             let config = MLModelConfiguration()
-            let model = try VNCoreMLModel(for: yolo11n(configuration: config).model)
+            let model = try VNCoreMLModel(for: best1(configuration: config).model)
             
             let request = VNCoreMLRequest(model: model) { [weak self] request, error in
                 self?.processObservations(for: request, error: error)

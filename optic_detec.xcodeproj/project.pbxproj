@@ -34,6 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/optic_detecApp.swift,
+				ColeML/best1.mlpackage,
 				ColeML/yolo11n.mlpackage,
 				Helpers/CameraPreview.swift,
 				Models/Detection.swift,
@@ -62,6 +63,7 @@
 		C74412C32EF0720C005AF5D4 /* Exceptions for "optic_detec" folder in "optic_detecTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ColeML/best1.mlpackage,
 				ColeML/yolo11n.mlpackage,
 				Helpers/CameraPreview.swift,
 				Models/Detection.swift,
